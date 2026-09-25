@@ -12,15 +12,18 @@ session_start();
 </head>
 
 <body>
-    <h5>Result:</h5>
-    <?php
-    echo "<p>Name: " . $_SESSION["fname"] . " " . $_SESSION["lname"] ."</p>";
-    echo "<p>E-mail: " . $_SESSION["emailInput"] . "</p>";
-    echo "<p>Password: " . $_SESSION["passwordInput"]  . "</p>";
-    echo "<p>Birthday: " . $_SESSION["bday"] . "</p>";
-    echo "<p>Gender: " . $_SESSION["gender"] . "</p>";
-    echo "<p>Course of choice: " . $_SESSION["course"] . "</p>";
-    ?>
+    <div class="container mt-5">
+        <h5>Result:</h5>
+        <?php
+        echo "<p>Full Name: " . $_SESSION["fname"] . " " . $_SESSION["lname"] ."</p>";
+        echo "<p>E-mail: " . $_SESSION["emailInput"] . "</p>";
+        echo "<p>Password: " . $_SESSION["passwordInput"]  . "</p>";
+        echo "<p>Confirmed Password: " . $_SESSION["confPasswordInput"] . "</p>";
+        echo "<p>Birthday: " . $_SESSION["bday"] . "</p>";
+        echo "<p>Gender: " . $_SESSION["gender"] . "</p>";
+        echo "<p>Course of choice: " . $_SESSION["course"] . "</p>";
+        ?>
+    </div>
 </body>
 
 </html>

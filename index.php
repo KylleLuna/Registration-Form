@@ -7,9 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $pattern = "/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?!.*\s).{5,20}$/";
 
-    function passwordError(){
+    function passwordError()
+    {
         return '
-            <h6>The password you\'ve made did not meet our requirements. Make sure that your password has at least:</h6>
+            <h6>The password you\'ve made did not meet the requirements. Make sure your password has at least:</h6>
             <p>* One (1) uppercase</p>
             <p>* One (1) lowecase</p>
             <p>* One (1) number</p>
@@ -20,7 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ';
     }
 
-    function confPasswordError(){
+    function confPasswordError()
+    {
         return '
             <h6>The password did not match the initial password you put in.</h6>
         ';
@@ -51,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -59,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <center>
             <h3>Registration Form</h3>
         </center>
@@ -118,6 +120,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <label class="form-check-label" for="male">Male</label>
                 <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
                 <label class="form-check-label" for="female">Female</label>
+                <input class="form-check-input" type="radio" name="gender" id="non-binary" value="Non-binary" required>
+                <label class="form-check-label" for="female">Non-binary</label>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="course">Course:</label>
